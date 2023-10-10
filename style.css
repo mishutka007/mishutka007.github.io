@@ -45,6 +45,7 @@ button {
   font-weight: bold;
   font-size: 20px;
   color: #ae9a95;
+  transition: all 1s ease 0s;
 }
 .alg {
   box-shadow: inset 1px -6px 1px #7aa7ba, 1px 1px 1px #7aa7ba;
