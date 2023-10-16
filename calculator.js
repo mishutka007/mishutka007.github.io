@@ -1,7 +1,10 @@
 let result = document.getElementById("zzzz");
 let qrrentSine = null;
 let calculate = (number) => {
-  if (result.value.length === 1 && number === ".") {
+  if (
+    (result.value.length === 1 || result.value.length === 0) &&
+    number === "."
+  ) {
     number = "0.";
   }
   if (result.value.length === 1 && ["+", "-", "/", "*"].includes(number)) {
@@ -9,6 +12,7 @@ let calculate = (number) => {
   }
   if (!qrrentSine && ["+", "-", "/", "*"].includes(number)) {
     qrrentSine = number;
+    result.value += number;
     return;
   }
   if (number == ".") {
